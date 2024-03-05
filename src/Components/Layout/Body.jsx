@@ -6,8 +6,14 @@ import { Link } from "react-router-dom";
 
 const Body = () => {
   return (
-    <Container sx={{ height: '100vh', overflowY: 'auto', paddingTop: '40px' }}>
-      <Box sx={{ maxHeight: "200px", overflowY: "auto" }}>
+    <Container
+      sx={{
+        height: "100vh",
+        marginTop: "50px",
+        marginBottom: '50px'
+      }}
+    >
+      <Box sx={{ maxHeight: "200px" }}>
         <Typography sx={{ fontWeight: "bold", color: "#f37c41" }}>
           The evolutionary gateway for design productivity
         </Typography>
@@ -33,27 +39,43 @@ const Body = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            border: '1px solid',
-            borderRadius: '40px',
-            paddingTop: '24px',
-            paddingBottom: '24px'
-            // backgroundColor: "#f37c41",
+            border: "1px solid",
+            borderRadius: "40px",
+            paddingTop: "24px",
+            paddingBottom: "24px",
+            backgroundColor: "#f37c41",
           }}
         >
-          <Box sx={{ color: "white", backgroundColor: "#f37c41", textAlign: 'center', textWrap: 'balance' }}>
-            <Typography variant="h4" sx={{fontWeight: "bold"}}>
+          <Box
+            sx={{
+              color: "white",
+              backgroundColor: "none",
+              textAlign: "center",
+              textWrap: "balance",
+            }}
+          >
+            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
               CHAT WITH INTELLIGENT DOOZOO AI & DISCOVER THE FUTURE OF DESIGN
               WORKFLOW
             </Typography>
           </Box>
           <Box>
             {" "}
-            <Box sx={{ border: "1px solid" }}>
-              <Avatar
-                alt="Logo"
-                src={BotChatBg}
-                sx={{ width: 350, height: 350 }}
-              />
+            <Box
+              sx={{
+                borderRadius: "23px",
+                boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.5)",
+                width: "250",
+                padding: '20px'
+              }}
+            >
+              <Box sx={{ background: "white", borderRadius: "23px" }}>
+                <Avatar
+                  alt="Logo"
+                  src={BotChatBg}
+                  sx={{ width: 250, height: 350 }}
+                />
+              </Box>
             </Box>
           </Box>
         </Container>
