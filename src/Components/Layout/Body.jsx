@@ -2,6 +2,9 @@ import { Avatar, Box, Container, Typography } from "@mui/material";
 import React from "react";
 import Hand1 from "../../assets/Hand1.png";
 import BotChatBg from "../../assets/bot-chat-background.png";
+import ChatTop from "../../assets/chat-top.png";
+import ChatIcon from "../../assets/chatO.png";
+import Book from "../../assets/book.png";
 import { Link } from "react-router-dom";
 
 const Body = () => {
@@ -10,7 +13,7 @@ const Body = () => {
       sx={{
         height: "100vh",
         marginTop: "50px",
-        marginBottom: '50px'
+        marginBottom: "50px",
       }}
     >
       <Box sx={{ maxHeight: "200px" }}>
@@ -39,8 +42,7 @@ const Body = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            border: "1px solid",
-            borderRadius: "40px",
+            borderRadius: "15px",
             paddingTop: "24px",
             paddingBottom: "24px",
             backgroundColor: "#f37c41",
@@ -49,12 +51,15 @@ const Body = () => {
           <Box
             sx={{
               color: "white",
-              backgroundColor: "none",
               textAlign: "center",
               textWrap: "balance",
+              alignSelf: "center",
             }}
           >
-            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+            <Typography
+              variant="h4"
+              sx={{ fontWeight: "bold", marginRight: "10px" }}
+            >
               CHAT WITH INTELLIGENT DOOZOO AI & DISCOVER THE FUTURE OF DESIGN
               WORKFLOW
             </Typography>
@@ -65,16 +70,114 @@ const Body = () => {
               sx={{
                 borderRadius: "23px",
                 boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.5)",
-                width: "250",
-                padding: '20px'
+                padding: "20px",
+                display: "flex",
+                background: "linear-gradient(to bottom,#FDD698, #FDA64A)",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              <Box sx={{ background: "white", borderRadius: "23px" }}>
+              <Box
+                sx={{
+                  background: "white",
+                  borderRadius: "23px",
+                  height: "407px",
+                }}
+              >
+                <Avatar
+                  alt="Logo"
+                  src={ChatTop}
+                  sx={{
+                    width: 250,
+                    height: 60,
+                    borderRadius: "8px",
+                    marginTop: "-2%",
+                  }}
+                />
                 <Avatar
                   alt="Logo"
                   src={BotChatBg}
-                  sx={{ width: 250, height: 350 }}
+                  sx={{ width: 250, height: 350, borderRadius: "0px" }}
                 />
+
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.3)",
+                    borderRadius: "15px",
+                    paddingTop: "24px",
+                    paddingBottom: "24px",
+                    marginLeft: "10px",
+                    marginRight: "10px",
+                    backgroundColor: "#f37c41",
+                    alignSelf: "center",
+                    transform: "translateY(-165%)",
+                  }}
+                >
+                  <Box sx={{ display: "flex" }}>
+                    <Avatar
+                      alt="Logo"
+                      src={ChatIcon}
+                      sx={{
+                        width: 30,
+                        height: 30,
+                        borderRadius: "0px",
+                        marginRight: "5px",
+                        marginLeft: "5px",
+                      }}
+                    />
+                    <Box
+                      sx={{
+                        maxWidth: "200px",
+                        textAlign: "start",
+                        height: "155px",
+                        marginRight: "5px",
+                      }}
+                    >
+                      <Typography sx={{ color: "white", fontSize: "12px" }}>
+                        Hey there! I'm the Doozoo intelligence. I'm here to give
+                        you a hand with anything you need to know about our
+                        AI-powered design tool. What can I help you with
+                      </Typography>
+                    </Box>
+                  </Box>
+                </Box>
+                <Box
+                  sx={{
+                    backgroundColor: "white",
+                    paddingTop: "10px",
+                    paddingBottom: "10px",
+                    transform: "translateY(-830%)",
+                    borderRadius: "10px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    marginTop: "10px",
+                    marginBottom: "10px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    marginLeft: "15px",
+                    marginRight: "15px",
+                  }}
+                >
+                  <Typography sx={{ color: "lightgray" }}>
+                    Type something....
+                  </Typography>
+                  <Box sx={{ display: "flex", alignItems: "center" }}>
+                    <Avatar
+                      alt="Logo"
+                      src={Book}
+                      sx={{
+                        width: 30,
+                        height: 30,
+                        borderRadius: "0px",
+                        marginRight: "5px",
+                        marginLeft: "auto",
+                      }}
+                    />
+                  </Box>
+                </Box>
               </Box>
             </Box>
           </Box>

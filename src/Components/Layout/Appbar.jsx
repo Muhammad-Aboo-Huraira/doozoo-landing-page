@@ -3,18 +3,17 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import Logo from "../../assets/logo.png";
 import { Link } from 'react-router-dom';
+import { Avatar } from '@mui/material';
 
 export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" sx={{ backgroundColor: "white", boxShadow: 'none' }}>
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+        <img src={Logo} alt="Logo" style={{ height: 20, marginRight: 10 }} />
+          <Typography variant="h6" component="div" sx={{  flexGrow: 1 }}>
           </Typography>
           <Typography sx={{ ml: 2, mr: 2, color: "black" }}>
             Have account already? <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Sign in</Link>
