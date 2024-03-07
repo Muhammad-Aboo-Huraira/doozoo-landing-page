@@ -1,23 +1,36 @@
-import { Avatar, Box, Container, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Container,
+  IconButton,
+  InputAdornment,
+  TextField,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import Hand1 from "../../assets/Hand1.png";
 import BotChatBg from "../../assets/bot-chat-background.png";
 import ChatTop from "../../assets/chat-top.png";
 import ChatIcon from "../../assets/chatO.png";
 import Book from "../../assets/book.png";
+import ChatUser from "../../assets/image 75.png";
 import { Link } from "react-router-dom";
 
 const Body = () => {
+  const handleSearch = () => {
+    // Handle search functionality
+    console.log("Search button clicked");
+  };
   return (
     <Container
       sx={{
-        height: "100vh",
+        // height: "100vh",
         marginTop: "50px",
         marginBottom: "50px",
       }}
     >
-      <Box sx={{ maxHeight: "200px" }}>
-        <Typography sx={{ fontWeight: "bold", color: "#f37c41" }}>
+      <Box sx={{ maxHeight: "200px", width: "715px" }}>
+        <Typography variant="h3" sx={{ fontWeight: "bold", color: "#f37c41" }}>
           The evolutionary gateway for design productivity
         </Typography>
       </Box>
@@ -57,10 +70,21 @@ const Body = () => {
             }}
           >
             <Typography
-              variant="h4"
-              sx={{ fontWeight: "bold", marginRight: "10px" }}
+              variant="h3"
+              sx={{ fontWeight: "bold", marginRight: "50px" }}
             >
-              CHAT WITH INTELLIGENT DOOZOO AI & DISCOVER THE FUTURE OF DESIGN
+              CHAT WITH
+              <br />
+              INTELLIGENT
+              <br />
+              DOOZOO AI &
+              <br />
+              DISCOVER
+              <br />
+              THE FUTURE
+              <br />
+              OF DESIGN
+              <br />
               WORKFLOW
             </Typography>
           </Box>
@@ -84,22 +108,77 @@ const Body = () => {
                   height: "407px",
                 }}
               >
-                <Avatar
-                  alt="Logo"
-                  src={ChatTop}
+                <Box
                   sx={{
-                    width: 250,
-                    height: 60,
-                    borderRadius: "8px",
-                    marginTop: "-2%",
+                    position: "relative",
+                    display: "inline-block",
+                    textAlign: "center",
                   }}
-                />
+                >
+                  <Avatar
+                    alt="Logo"
+                    src={ChatTop}
+                    sx={{
+                      width: 265,
+                      height: 60,
+                      borderRadius: "8px",
+                      marginTop: "-2%",
+                    }}
+                  />
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      transform: "translate(-50%, -50%)",
+                    }}
+                  >
+                    <Box sx={{ transform: "translateX(-165%)" }}>
+                      <Avatar
+                        alt="User"
+                        src={ChatUser}
+                        sx={{
+                          width: 30,
+                          height: 30,
+                          borderRadius: "20px",
+                          position: "absolute",
+                          marginTop: "9px",
+                          left: "50%",
+                          transform: "translate(-50%, -50%)",
+                        }}
+                      />
+                    </Box>
+                    <Typography
+                      variant="subtitle2"
+                      sx={{
+                        color: "white",
+                        fontWeight: 300,
+                        transform: "translateX(-85%)",
+                      }}
+                    >
+                      New User
+                    </Typography>
+                    <Typography
+                      variant="subtitle2"
+                      sx={{
+                        position: "absolute",
+                        bottom: 0,
+                        left: "50%",
+                        color: "white",
+                        fontWeight: 300,
+                        width: "130px",
+                        height: "22px",
+                      }}
+                    >
+                      Chat with Doozoo
+                    </Typography>
+                  </Box>
+                </Box>
                 <Avatar
                   alt="Logo"
                   src={BotChatBg}
-                  sx={{ width: 250, height: 350, borderRadius: "0px" }}
+                  sx={{ width: 265, height: 350, borderRadius: "0px" }}
                 />
-
                 <Box
                   sx={{
                     display: "flex",
@@ -178,11 +257,88 @@ const Body = () => {
                     />
                   </Box>
                 </Box>
+                <Box
+                  sx={{
+                    transform: "translateY(-610%)",
+                    display: "flex",
+                    alignItems: "center",
+                    width: 250,
+                    paddingLeft: "7px",
+                  }}
+                >
+                  <TextField
+                    placeholder="Drop your email"
+                    variant="outlined"
+                    autoComplete="off"
+                    sx={{
+                      backgroundColor: "white",
+                      borderRadius: 4,
+                      paddingTop: 0,
+                      "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
+                        {
+                          borderColor: "#f37c41",
+                        },
+                    }}
+                    InputProps={{
+                      sx: { paddingRight: 0, borderRadius: 4 },
+                      endAdornment: (
+                        <InputAdornment position="end" sx={{ paddingRight: 0 }}>
+                          <IconButton
+                            onClick={handleSearch}
+                            sx={{
+                              background: "#f37c41",
+                              borderRadius: "15px",
+                              color: "white",
+                              padding: "20px",
+                            }}
+                          >
+                            <Typography sx={{ fontSize: "11px" }}>
+                              Join Waitlist
+                            </Typography>
+                          </IconButton>
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </Box>
               </Box>
             </Box>
           </Box>
         </Container>
       </Box>
+        <TextField
+          placeholder="Drop your email"
+          variant="outlined"
+          autoComplete="off"
+          sx={{
+            backgroundColor: "white",
+            borderRadius: 4,
+            paddingTop: 2,
+            "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+              borderColor: "#f37c41",
+            },
+          }}
+          InputProps={{
+            sx: { paddingRight: 0, borderRadius: 4 },
+            endAdornment: (
+              <InputAdornment position="end" sx={{ paddingRight: 0 }}>
+                <IconButton
+                  onClick={handleSearch}
+                  sx={{
+                    background: "#f37c41",
+                    borderRadius: "15px",
+                    color: "white",
+                    padding: "20px",
+                  }}
+                >
+                  <Typography sx={{ fontSize: "11px" }}>
+                    Join Waitlist
+                  </Typography>
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+        />
     </Container>
   );
 };
