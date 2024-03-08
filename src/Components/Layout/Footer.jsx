@@ -8,7 +8,7 @@ import { Box } from '@mui/material';
 
 function Footer() {
   return (
-    <AppBar position="fixed" color="primary" style={{ top: 'auto', bottom: 0, backgroundColor: "white", boxShadow: 'none' }}>
+    <AppBar position="end" color="primary" style={{ top: 'auto', bottom: 0, backgroundColor: "white", boxShadow: 'none' }}>
       <Toolbar>
         <Box >
           <Box sx={{ display: 'flex', alignItems: 'center' }}>

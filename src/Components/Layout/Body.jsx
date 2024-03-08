@@ -14,6 +14,14 @@ import ChatTop from "../../assets/chat-top.png";
 import ChatIcon from "../../assets/chatO.png";
 import Book from "../../assets/book.png";
 import ChatUser from "../../assets/image 75.png";
+import Torus3 from "../../assets/Torus3.png";
+import RoundCube3 from "../../assets/RoundCube3.png";
+import VidImg from "../../assets/Image.png";
+import playBtn from "../../assets/playButton.png";
+import Logo from "../../assets/logo.png";
+import ChatImg from "../../assets/Chat-Image1.png";
+import LaptopImg from "../../assets/imageLaptop.png";
+import Gen3 from "../../assets/gen3.png";
 import { Link } from "react-router-dom";
 
 const Body = () => {
@@ -24,12 +32,13 @@ const Body = () => {
   return (
     <Container
       sx={{
+        width: "200%",
         // height: "100vh",
         marginTop: "50px",
         marginBottom: "50px",
       }}
     >
-      <Box sx={{ maxHeight: "200px", width: "715px" }}>
+      <Box sx={{ maxHeight: "200px", width: "715px", margin: "auto" }}>
         <Typography variant="h3" sx={{ fontWeight: "bold", color: "#f37c41" }}>
           The evolutionary gateway for design productivity
         </Typography>
@@ -71,7 +80,7 @@ const Body = () => {
           >
             <Typography
               variant="h3"
-              sx={{ fontWeight: "bold", marginRight: "50px" }}
+              sx={{ fontWeight: "bold", marginRight: "60px" }}
             >
               CHAT WITH
               <br />
@@ -266,54 +275,267 @@ const Body = () => {
                     paddingLeft: "7px",
                   }}
                 >
-                  <TextField
-                    placeholder="Drop your email"
-                    variant="outlined"
-                    autoComplete="off"
-                    sx={{
-                      backgroundColor: "white",
-                      borderRadius: 4,
-                      paddingTop: 0,
-                      "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
-                        {
-                          borderColor: "#f37c41",
-                        },
-                    }}
-                    InputProps={{
-                      sx: { paddingRight: 0, borderRadius: 4 },
-                      endAdornment: (
-                        <InputAdornment position="end" sx={{ paddingRight: 0 }}>
-                          <IconButton
-                            onClick={handleSearch}
-                            sx={{
-                              background: "#f37c41",
-                              borderRadius: "15px",
-                              color: "white",
-                              padding: "20px",
-                            }}
+                  <form action="">
+                    <TextField
+                      type="email"
+                      required
+                      placeholder="Drop your email"
+                      variant="outlined"
+                      autoComplete="off"
+                      sx={{
+                        backgroundColor: "white",
+                        borderRadius: 4,
+                        paddingTop: "1px",
+                        "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
+                          {
+                            borderColor: "#f37c41",
+                          },
+                      }}
+                      InputProps={{
+                        sx: { paddingRight: 0, borderRadius: 4 },
+                        endAdornment: (
+                          <InputAdornment
+                            position="end"
+                            sx={{ paddingRight: 0 }}
                           >
-                            <Typography sx={{ fontSize: "11px" }}>
-                              Join Waitlist
-                            </Typography>
-                          </IconButton>
-                        </InputAdornment>
-                      ),
-                    }}
-                  />
+                            <IconButton
+                              type="submit"
+                              onClick={handleSearch}
+                              sx={{
+                                background: "#f37c41",
+                                borderRadius: "15px",
+                                color: "white",
+                                padding: "20px",
+                                "&:hover": {
+                                  background: "#ff9f71",
+                                },
+                              }}
+                            >
+                              <Typography sx={{ fontSize: "11px" }}>
+                                Join Waitlist
+                              </Typography>
+                            </IconButton>
+                          </InputAdornment>
+                        ),
+                      }}
+                    />
+                  </form>
                 </Box>
               </Box>
             </Box>
           </Box>
         </Container>
       </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "relative",
+          height: "600px",
+        }}
+      >
+        <Avatar
+          alt="VidImg"
+          src={VidImg}
+          sx={{
+            height: 445,
+            width: 700,
+            borderRadius: "0px",
+          }}
+        />
+
+        <Avatar
+          alt="Logo"
+          src={Logo}
+          sx={{
+            position: "absolute",
+            transform: "translate(-270px, -180px)",
+            borderRadius: "0px",
+            height: 20,
+            width: 90,
+          }}
+        />
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+        >
+          <Avatar
+            alt="PlayBtn"
+            src={playBtn}
+            sx={{
+              borderRadius: "0px",
+              color: "#f37c41",
+              height: 70,
+              width: 65,
+            }}
+          />
+        </Box>
+        <Avatar
+          alt="RoundCube3"
+          src={RoundCube3}
+          sx={{
+            position: "absolute",
+            height: 160,
+            width: 180,
+            borderRadius: "0px",
+            transform: "translate(390px, 65px)",
+            zIndex: -1, // To make it behind VidImg
+          }}
+        />
+        <Avatar
+          alt="Torus3"
+          src={Torus3}
+          sx={{
+            position: "absolute",
+            height: 200,
+            width: 180,
+            left: 0,
+            borderRadius: "0px",
+            transform: "translateY(215px)",
+            zIndex: -1, // To make it behind VidImg
+          }}
+        />
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "relative",
+          height: "600px",
+          backgroundColor: "#f37c41",
+          marginTop: "200px",
+        }}
+      >
+        <Box
+          sx={{
+            position: "relative",
+            height: "1030px",
+            width: "100%",
+            overflow: "hidden",
+            marginTop: "100px",
+          }}
+        >
+          <Avatar
+            alt="ChatImg"
+            src={ChatImg}
+            sx={{
+              position: "absolute",
+              // top: "-150px",
+              left: "50%",
+              transform: "translateX(-47%)",
+              height: "630px",
+              width: "852px",
+              borderRadius: "0px",
+            }}
+          />
+          <Box sx={{ transform: "translateY(660px)" }}>
+            {" "}
+            <Typography
+              variant="h4"
+              sx={{
+                background: "linear-gradient(to bottom,#FDD698, #FDA64A)",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+                fontWeight: "700",
+                textAlign: "center",
+              }}
+            >
+              HUMAN X AI SYNERGY TO
+              <br />
+              REVOLUTIONIZE THE DESIGN GAME
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          marginTop: "50px",
+          position: "relative",
+        }}
+      >
+        <Box sx={{ marginRight: "20px", marginLeft: "100px" }}>
+          <Avatar
+            alt="LaptopImg"
+            src={LaptopImg}
+            sx={{
+              height: 215,
+              width: 400,
+              borderRadius: "8px",
+            }}
+          />
+        </Box>
+
+        <Box
+          sx={{ marginRight: "100px", textAlign: "start", marginLeft: "20px" }}
+        >
+          <Typography
+            variant="h4"
+            sx={{ color: "#f37c41", fontWeight: "bold" }}
+          >
+            Doozoo GEN 2
+          </Typography>
+          <Typography>
+            Doozoo empowers beyond human limits and masters the 'New world of
+            working' by perfecting a platform that delivers unlimited graphics,
+            creative design and imagery with speed and efficiency.
+            <br />
+            <br />
+            Empowering human potential with intelligent creative output and
+            workflow superiority
+          </Typography>
+        </Box>
+      </Box>
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          position: "relative",
+          height: 500,
+        }}
+      >
+        <Avatar
+          alt="Gen3"
+          src={Gen3}
+          sx={{
+            height: 465,
+            width: "100%",
+            borderRadius: "0px",
+          }}
+        />
+      </Box>
+
+      <Typography
+        variant="h4"
+        sx={{
+          color: "#f37c41",
+          fontWeight: "bold",
+          transform: "translateY(-125px)",
+        }}
+      >
+        Join waitlist for early
+        <br />
+        access to DOOZOO GEN 2
+      </Typography>
+      <form action="" style={{ transform: 'translateY(-80px)' }}>
         <TextField
+          type="email"
+          required
           placeholder="Drop your email"
           variant="outlined"
           autoComplete="off"
           sx={{
             backgroundColor: "white",
             borderRadius: 4,
-            paddingTop: 2,
+            paddingTop: 0,
             "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
               borderColor: "#f37c41",
             },
@@ -323,12 +545,16 @@ const Body = () => {
             endAdornment: (
               <InputAdornment position="end" sx={{ paddingRight: 0 }}>
                 <IconButton
+                  type="submit"
                   onClick={handleSearch}
                   sx={{
                     background: "#f37c41",
                     borderRadius: "15px",
                     color: "white",
                     padding: "20px",
+                    "&:hover": {
+                      background: "#ff9f71",
+                    },
                   }}
                 >
                   <Typography sx={{ fontSize: "11px" }}>
@@ -339,6 +565,7 @@ const Body = () => {
             ),
           }}
         />
+      </form>
     </Container>
   );
 };
