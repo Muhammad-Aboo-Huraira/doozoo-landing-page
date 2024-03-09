@@ -23,6 +23,7 @@ import ChatImg from "../../assets/Chat-Image1.png";
 import LaptopImg from "../../assets/imageLaptop.png";
 import Gen3 from "../../assets/gen3.png";
 import { Link } from "react-router-dom";
+import ReactPlayer from "react-player";
 
 const Body = () => {
   const handleSearch = () => {
@@ -32,14 +33,15 @@ const Body = () => {
   return (
     <Container
       sx={{
-        width: "200%",
-        // height: "100vh",
+        maxWidth: 'unset !important',
+        paddingLeft: 'unset !important',
+        paddingRight: 'unset !important',
         marginTop: "50px",
         marginBottom: "50px",
       }}
     >
       <Box sx={{ maxHeight: "200px", width: "715px", margin: "auto" }}>
-        <Typography variant="h3" sx={{ fontWeight: "bold", color: "#f37c41" }}>
+        <Typography variant="h3" sx={{ fontWeight: "bold", color: "#f37c41", textAlign: 'center' }}>
           The evolutionary gateway for design productivity
         </Typography>
       </Box>
@@ -54,7 +56,7 @@ const Body = () => {
         <Avatar alt="Logo" src={Hand1} sx={{ width: 40, height: 40 }} />
       </Box>
       <Box>
-        <Typography>
+        <Typography sx={{ textAlign: 'center' }}>
           Let's chat with{" "}
           <Link to="/" style={{ color: "#f37c41", textDecoration: "none" }}>
             Doozoo
@@ -63,6 +65,7 @@ const Body = () => {
         <Container
           sx={{
             display: "flex",
+            maxWidth: 'unset !important',
             justifyContent: "center",
             borderRadius: "15px",
             paddingTop: "24px",
@@ -80,7 +83,7 @@ const Body = () => {
           >
             <Typography
               variant="h3"
-              sx={{ fontWeight: "bold", marginRight: "60px" }}
+              sx={{ fontWeight: "bold", marginRight: "60px", textAlign: 'start' }}
             >
               CHAT WITH
               <br />
@@ -335,14 +338,24 @@ const Body = () => {
           height: "600px",
         }}
       >
-        <Avatar
-          alt="VidImg"
-          src={VidImg}
-          sx={{
-            height: 445,
-            width: 700,
-            borderRadius: "0px",
-          }}
+        <ReactPlayer
+          url="https://firebasestorage.googleapis.com/v0/b/qr-app-a4a86.appspot.com/o/DOOZOO%20-%20NEXT%20GEN%20-%20FINAL%20HORIZONTAL.mp4?alt=media&token=c7a62121-971a-4651-bd9b-a68e8f432ff5"
+          controls={true}
+          height="445px"
+          width="700px"
+          light={VidImg}
+          playIcon={
+            <Avatar
+              alt="PlayBtn"
+              src={playBtn}
+              sx={{
+                borderRadius: "0px",
+                color: "#f37c41",
+                height: 70,
+                width: 65,
+              }}
+            />
+          }
         />
 
         <Avatar
@@ -363,18 +376,7 @@ const Body = () => {
             left: "50%",
             transform: "translate(-50%, -50%)",
           }}
-        >
-          <Avatar
-            alt="PlayBtn"
-            src={playBtn}
-            sx={{
-              borderRadius: "0px",
-              color: "#f37c41",
-              height: 70,
-              width: 65,
-            }}
-          />
-        </Box>
+        ></Box>
         <Avatar
           alt="RoundCube3"
           src={RoundCube3}
@@ -415,7 +417,7 @@ const Body = () => {
         <Box
           sx={{
             position: "relative",
-            height: "1030px",
+            height: "930px",
             width: "100%",
             overflow: "hidden",
             marginTop: "100px",
@@ -429,12 +431,12 @@ const Body = () => {
               // top: "-150px",
               left: "50%",
               transform: "translateX(-47%)",
-              height: "630px",
-              width: "852px",
+              height: "515px",
+              width: "700px",
               borderRadius: "0px",
             }}
           />
-          <Box sx={{ transform: "translateY(660px)" }}>
+          <Box sx={{ transform: "translateY(600px)" }}>
             {" "}
             <Typography
               variant="h4"
@@ -519,13 +521,15 @@ const Body = () => {
           color: "#f37c41",
           fontWeight: "bold",
           transform: "translateY(-125px)",
+          textAlign: 'center'
         }}
       >
         Join waitlist for early
         <br />
         access to DOOZOO GEN 2
       </Typography>
-      <form action="" style={{ transform: 'translateY(-80px)' }}>
+      <Box id="joinWaitlist">
+      <form action="" style={{ transform: "translateY(-80px)", textAlign: 'center' }}>
         <TextField
           type="email"
           required
@@ -566,6 +570,7 @@ const Body = () => {
           }}
         />
       </form>
+      </Box>
     </Container>
   );
 };
