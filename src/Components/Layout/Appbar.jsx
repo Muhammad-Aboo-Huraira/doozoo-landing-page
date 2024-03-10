@@ -15,7 +15,7 @@ export default function ButtonAppBar() {
         sx={{ backgroundColor: "white", boxShadow: "none" }}
       >
         <Toolbar>
-          <img src={Logo} alt="Logo" style={{ height: 20, marginRight: 10 }} />
+          <img src={Logo} alt="Logo" style={{ height: 20 }} />
           <Typography
             variant="h6"
             component="div"

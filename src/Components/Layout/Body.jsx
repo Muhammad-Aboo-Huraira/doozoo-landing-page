@@ -33,15 +33,18 @@ const Body = () => {
   return (
     <Container
       sx={{
-        maxWidth: 'unset !important',
-        paddingLeft: 'unset !important',
-        paddingRight: 'unset !important',
+        maxWidth: "unset !important",
+        paddingLeft: "unset !important",
+        paddingRight: "unset !important",
         marginTop: "50px",
         marginBottom: "50px",
       }}
     >
-      <Box sx={{ maxHeight: "200px", width: "715px", margin: "auto" }}>
-        <Typography variant="h3" sx={{ fontWeight: "bold", color: "#f37c41", textAlign: 'center' }}>
+      <Box sx={{ maxHeight: "200px", width: "820px", margin: "auto" }}>
+        <Typography
+          variant="h2"
+          sx={{ fontWeight: "bold", color: "#f37c41", textAlign: "center" }}
+        >
           The evolutionary gateway for design productivity
         </Typography>
       </Box>
@@ -53,10 +56,10 @@ const Body = () => {
           marginTop: "5px",
         }}
       >
-        <Avatar alt="Logo" src={Hand1} sx={{ width: 40, height: 40 }} />
+        <Avatar alt="Hand1" src={Hand1} sx={{ width: 60, height: 60 }} />
       </Box>
       <Box>
-        <Typography sx={{ textAlign: 'center' }}>
+        <Typography sx={{ textAlign: "center", color: '#555555', fontSize: '25px' }}>
           Let's chat with{" "}
           <Link to="/" style={{ color: "#f37c41", textDecoration: "none" }}>
             Doozoo
@@ -65,12 +68,13 @@ const Body = () => {
         <Container
           sx={{
             display: "flex",
-            maxWidth: 'unset !important',
+            maxWidth: "80%",
             justifyContent: "center",
             borderRadius: "15px",
             paddingTop: "24px",
             paddingBottom: "24px",
             backgroundColor: "#f37c41",
+            marginTop: '25px'
           }}
         >
           <Box
@@ -83,7 +87,11 @@ const Body = () => {
           >
             <Typography
               variant="h3"
-              sx={{ fontWeight: "bold", marginRight: "60px", textAlign: 'start' }}
+              sx={{
+                fontWeight: "bold",
+                marginRight: "90px",
+                textAlign: "start",
+              }}
             >
               CHAT WITH
               <br />
@@ -336,13 +344,14 @@ const Body = () => {
           alignItems: "center",
           position: "relative",
           height: "600px",
+          marginTop: "90px",
         }}
       >
         <ReactPlayer
           url="https://firebasestorage.googleapis.com/v0/b/qr-app-a4a86.appspot.com/o/DOOZOO%20-%20NEXT%20GEN%20-%20FINAL%20HORIZONTAL.mp4?alt=media&token=c7a62121-971a-4651-bd9b-a68e8f432ff5"
           controls={true}
-          height="445px"
-          width="700px"
+          height="630px"
+          width="1000px"
           light={VidImg}
           playIcon={
             <Avatar
@@ -369,23 +378,15 @@ const Body = () => {
             width: 90,
           }}
         />
-        <Box
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-          }}
-        ></Box>
         <Avatar
           alt="RoundCube3"
           src={RoundCube3}
           sx={{
             position: "absolute",
-            height: 160,
-            width: 180,
+            height: 285,
+            width: 320,
             borderRadius: "0px",
-            transform: "translate(390px, 65px)",
+            transform: "translate(600px, 90px)",
             zIndex: -1, // To make it behind VidImg
           }}
         />
@@ -394,11 +395,11 @@ const Body = () => {
           src={Torus3}
           sx={{
             position: "absolute",
-            height: 200,
-            width: 180,
+            height: 360,
+            width: 320,
             left: 0,
             borderRadius: "0px",
-            transform: "translateY(215px)",
+            transform: "translateY(280px)",
             zIndex: -1, // To make it behind VidImg
           }}
         />
@@ -409,15 +410,16 @@ const Body = () => {
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
-          height: "600px",
+          height: "1000px",
           backgroundColor: "#f37c41",
-          marginTop: "200px",
+          marginTop: "350px",
+          width: "auto",
         }}
       >
         <Box
           sx={{
             position: "relative",
-            height: "930px",
+            height: "1575px",
             width: "100%",
             overflow: "hidden",
             marginTop: "100px",
@@ -431,15 +433,15 @@ const Body = () => {
               // top: "-150px",
               left: "50%",
               transform: "translateX(-47%)",
-              height: "515px",
-              width: "700px",
+              height: "875px",
+              width: "1190px",
               borderRadius: "0px",
             }}
           />
-          <Box sx={{ transform: "translateY(600px)" }}>
+          <Box sx={{ transform: "translateY(980px)" }}>
             {" "}
             <Typography
-              variant="h4"
+              variant="h2"
               sx={{
                 background: "linear-gradient(to bottom,#FDD698, #FDA64A)",
                 WebkitBackgroundClip: "text",
@@ -463,13 +465,20 @@ const Body = () => {
           position: "relative",
         }}
       >
-        <Box sx={{ marginRight: "20px", marginLeft: "100px" }}>
+        <Box
+          sx={{
+            marginRight: "20px",
+            marginLeft: "100px",
+            height: "360px",
+            width: "-webkit-fill-available",
+          }}
+        >
           <Avatar
             alt="LaptopImg"
             src={LaptopImg}
             sx={{
-              height: 215,
-              width: 400,
+              height: 370,
+              width: 680,
               borderRadius: "8px",
             }}
           />
@@ -479,12 +488,14 @@ const Body = () => {
           sx={{ marginRight: "100px", textAlign: "start", marginLeft: "20px" }}
         >
           <Typography
-            variant="h4"
+            variant="h2"
             sx={{ color: "#f37c41", fontWeight: "bold" }}
           >
             Doozoo GEN 2
           </Typography>
-          <Typography>
+          <Typography
+          sx={{ color: '#555555', fontSize: '25px' }}
+          >
             Doozoo empowers beyond human limits and masters the 'New world of
             working' by perfecting a platform that delivers unlimited graphics,
             creative design and imagery with speed and efficiency.
@@ -501,14 +512,14 @@ const Body = () => {
           display: "flex",
           justifyContent: "center",
           position: "relative",
-          height: 500,
+          height: "100%",
         }}
       >
         <Avatar
           alt="Gen3"
           src={Gen3}
           sx={{
-            height: 465,
+            height: "100%",
             width: "100%",
             borderRadius: "0px",
           }}
@@ -516,60 +527,63 @@ const Body = () => {
       </Box>
 
       <Typography
-        variant="h4"
+        variant="h2"
         sx={{
           color: "#f37c41",
           fontWeight: "bold",
           transform: "translateY(-125px)",
-          textAlign: 'center'
+          textAlign: "center",
         }}
       >
-        Join waitlist for early
+        Join the waitlist for early
         <br />
         access to DOOZOO GEN 2
       </Typography>
       <Box id="joinWaitlist">
-      <form action="" style={{ transform: "translateY(-80px)", textAlign: 'center' }}>
-        <TextField
-          type="email"
-          required
-          placeholder="Drop your email"
-          variant="outlined"
-          autoComplete="off"
-          sx={{
-            backgroundColor: "white",
-            borderRadius: 4,
-            paddingTop: 0,
-            "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-              borderColor: "#f37c41",
-            },
-          }}
-          InputProps={{
-            sx: { paddingRight: 0, borderRadius: 4 },
-            endAdornment: (
-              <InputAdornment position="end" sx={{ paddingRight: 0 }}>
-                <IconButton
-                  type="submit"
-                  onClick={handleSearch}
-                  sx={{
-                    background: "#f37c41",
-                    borderRadius: "15px",
-                    color: "white",
-                    padding: "20px",
-                    "&:hover": {
-                      background: "#ff9f71",
-                    },
-                  }}
-                >
-                  <Typography sx={{ fontSize: "11px" }}>
-                    Join Waitlist
-                  </Typography>
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-        />
-      </form>
+        <form
+          action=""
+          style={{ transform: "translateY(-80px)", textAlign: "center" }}
+        >
+          <TextField
+            type="email"
+            required
+            placeholder="Drop your email"
+            variant="outlined"
+            autoComplete="off"
+            sx={{
+              backgroundColor: "white",
+              borderRadius: 4,
+              paddingTop: 0,
+              "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+                borderColor: "#f37c41",
+              },
+            }}
+            InputProps={{
+              sx: { paddingRight: 0, borderRadius: 4 },
+              endAdornment: (
+                <InputAdornment position="end" sx={{ paddingRight: 0 }}>
+                  <IconButton
+                    type="submit"
+                    onClick={handleSearch}
+                    sx={{
+                      background: "#f37c41",
+                      borderRadius: "15px",
+                      color: "white",
+                      padding: "20px",
+                      "&:hover": {
+                        background: "#ff9f71",
+                      },
+                    }}
+                  >
+                    <Typography sx={{ fontSize: "11px" }}>
+                      Join Waitlist
+                    </Typography>
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
+        </form>
       </Box>
     </Container>
   );
