@@ -9,10 +9,10 @@ import { Box } from '@mui/material';
 function Footer() {
   return (
     <Box>
-    <AppBar position="sticky" color="primary" style={{ top: 'auto', bottom: 0, backgroundColor: "white", boxShadow: 'none' }}>
+    <AppBar position="sticky" color="primary" style={{ top: 'auto',  backgroundColor: "white", boxShadow: 'none', marginBottom: '50px' }}>
       <Toolbar>
         <Box >
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
           <Typography variant="body1" color="inherit" sx={{ mr: 4, color: "black" }}>
             Connect with Doozoo
           </Typography>

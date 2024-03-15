@@ -5,7 +5,9 @@ import {
   IconButton,
   InputAdornment,
   TextField,
+  ThemeProvider,
   Typography,
+  createTheme,
 } from "@mui/material";
 import React from "react";
 import Hand1 from "../../assets/Hand1.png";
@@ -24,6 +26,13 @@ import LaptopImg from "../../assets/imageLaptop.png";
 import Gen3 from "../../assets/gen3.png";
 import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
+import "@fontsource/bebas-neue"; 
+
+const theme = createTheme({
+  typography: {
+    fontFamily: ["Bebas Neue"],
+  },
+});
 
 const Body = () => {
   const handleSearch = () => {
@@ -43,7 +52,7 @@ const Body = () => {
       <Box sx={{ maxHeight: "200px", width: "820px", margin: "auto" }}>
         <Typography
           variant="h2"
-          sx={{ fontWeight: "bold", color: "#f37c41", textAlign: "center" }}
+          sx={{ fontWeight: "bold", color: "rgb(254 124 3)", textAlign: "center" }}
         >
           The evolutionary gateway for design productivity
         </Typography>
@@ -61,7 +70,7 @@ const Body = () => {
       <Box>
         <Typography sx={{ textAlign: "center", color: '#555555', fontSize: '25px' }}>
           Let's chat with{" "}
-          <Link to="/" style={{ color: "#f37c41", textDecoration: "none" }}>
+          <Link to="/" style={{ color: "rgb(254 124 3)", textDecoration: "none" }}>
             Doozoo
           </Link>
         </Typography>
@@ -73,7 +82,7 @@ const Body = () => {
             borderRadius: "15px",
             paddingTop: "24px",
             paddingBottom: "24px",
-            backgroundColor: "#f37c41",
+            backgroundColor: "rgb(254 124 3)",
             marginTop: '25px'
           }}
         >
@@ -85,12 +94,14 @@ const Body = () => {
               alignSelf: "center",
             }}
           >
+            <ThemeProvider theme={theme}>
             <Typography
               variant="h3"
               sx={{
                 fontWeight: "bold",
                 marginRight: "90px",
                 textAlign: "start",
+                fontSize: '55px'
               }}
             >
               CHAT WITH
@@ -107,6 +118,7 @@ const Body = () => {
               <br />
               WORKFLOW
             </Typography>
+            </ThemeProvider>
           </Box>
           <Box>
             {" "}
@@ -387,7 +399,7 @@ const Body = () => {
             width: 320,
             borderRadius: "0px",
             transform: "translate(600px, 90px)",
-            zIndex: -1, // To make it behind VidImg
+            zIndex: -1,
           }}
         />
         <Avatar
@@ -400,7 +412,7 @@ const Body = () => {
             left: 0,
             borderRadius: "0px",
             transform: "translateY(280px)",
-            zIndex: -1, // To make it behind VidImg
+            zIndex: -1,
           }}
         />
       </Box>
@@ -411,7 +423,7 @@ const Body = () => {
           alignItems: "center",
           position: "relative",
           height: "1000px",
-          backgroundColor: "#f37c41",
+          backgroundColor: "rgb(254 124 3)",
           marginTop: "350px",
           width: "auto",
         }}
@@ -430,7 +442,6 @@ const Body = () => {
             src={ChatImg}
             sx={{
               position: "absolute",
-              // top: "-150px",
               left: "50%",
               transform: "translateX(-47%)",
               height: "875px",
@@ -440,20 +451,23 @@ const Body = () => {
           />
           <Box sx={{ transform: "translateY(980px)" }}>
             {" "}
+            <ThemeProvider theme={theme}>
             <Typography
               variant="h2"
               sx={{
-                background: "linear-gradient(to bottom,#FDD698, #FDA64A)",
+                // background: "linear-gradient(to bottom,#FDD698, #FDA64A)",
                 WebkitBackgroundClip: "text",
-                color: "transparent",
+                color: "#FFC299",
                 fontWeight: "700",
                 textAlign: "center",
+                textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)",
               }}
             >
               HUMAN X AI SYNERGY TO
               <br />
               REVOLUTIONIZE THE DESIGN GAME
             </Typography>
+            </ThemeProvider>
           </Box>
         </Box>
       </Box>
